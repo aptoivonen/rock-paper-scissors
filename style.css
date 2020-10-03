@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap");
+
+:root {
+  font-family: "Teko", sans-serif;
+  font-size: 16px;
+  --palette-color-violette: #581b98;
+  --palette-color-violette-light: #9c1de7;
+  --palette-color-yellow: #faee1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 2rem;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.content {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 20px 1rem;
+  outline: 1px dashed red;
+}
+
+.header h1 {
+  margin: 0;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.round-container {
+  display: flex;
+  align-items: center;
+}
+
+.round-label {
+  font-size: 1rem;
+}
+
+.round {
+  margin-left: 10px;
+}
+
+.player-container {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.player-name {
+  font-size: 2.5rem;
+  margin-right: 20px;
+  width: 8rem;
+  outline: 1px solid green;
+}
+
+.label {
+  font-size: 1.5rem;
+}
+
+.player-wins-label {
+  margin-right: 10px;
+}
+
+.player-button-group {
+  display: flex;
+  margin-left: 50px;
+}
+
+.play-btn {
+  background: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: inherit;
+  margin: 0 5px;
+  padding: 0;
+  width: 5rem;
+  height: 5rem;
+}
+
+.play-btn i {
+  font-size: 4rem;
+}
+
+.player-btn {
+  border: 1px solid black;
+  color: #000;
+}
+
+.computer-btn {
+  border: 1px solid #bbb;
+  color: #aaa;
+}
+
+.ties-container {
+  display: flex;
+  align-items: center;
+}
+
+.ties-label {
+  margin-right: 10px;
+  margin-left: 140px;
+}
+
+.new-game-container {
+  margin-top: 20px;
+}
+
+.new-game-btn {
+  font: inherit;
+  padding: 0.5rem 0.9rem;
+}

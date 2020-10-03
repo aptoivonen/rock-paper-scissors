@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A game of rock paper scissors." />
+    <meta name="author" content="Aleksi Toivonen" />
+    <title>Rock Paper Scissors</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="content header">
+      <h1>Rock Paper Scissors</h1>
+    </header>
+    <section class="content play">
+      <div class="round-container">
+        <p class="round-label">Round</p>
+        <p class="round" id="round">1</p>
+      </div>
+      <div class="player-container">
+        <p class="player-name">Player</p>
+        <p class="player-wins-label label">Wins</p>
+        <p class="player-wins" id="player-wins">0</p>
+        <div class="player-button-group">
+          <button id="rock-btn" class="play-btn player-btn">
+            <i class="fa fa-hand-grab-o"></i>
+          </button>
+          <button id="paper-btn" class="play-btn player-btn">
+            <i class="fa fa-hand-paper-o"></i>
+          </button>
+          <button id="scissors-btn" class="play-btn player-btn">
+            <i class="fa fa-hand-scissors-o"></i>
+          </button>
+        </div>
+      </div>
+      <div class="ties-container">
+        <p class="ties-label label">Ties</p>
+        <p id="ties">0</p>
+      </div>
+      <div class="player-container">
+        <p class="player-name">Computer</p>
+        <p class="player-wins-label label">Wins</p>
+        <p class="player-wins" id="computer-wins">0</p>
+        <div class="player-button-group">
+          <div class="play-btn computer-btn">
+            <i class="fa fa-hand-grab-o"></i>
+          </div>
+          <div class="play-btn computer-btn">
+            <i class="fa fa-hand-paper-o"></i>
+          </div>
+          <div class="play-btn computer-btn">
+            <i class="fa fa-hand-scissors-o"></i>
+          </div>
+        </div>
+      </div>
+      <div class="new-game-container">
+        <button class="new-game-btn" id="new-game-btn">New Game</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
