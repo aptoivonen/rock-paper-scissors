@@ -17,7 +17,7 @@
       <h1 class="main-heading">Rock Paper Scissors</h1>
     </header>
 
-    <section class="container play-area">
+    <section class="container play-area" id="play-area">
       <div class="round-container">
         <span class="round-label">Round</span>
         <span class="round" id="round">1</span>
@@ -32,13 +32,13 @@
       </div>
 
       <div class="player-button-group player-button-area">
-        <button id="rock-btn" class="play-btn player-btn">
+        <button id="player-rock-btn" class="play-btn player-btn">
           <i class="fa fa-hand-grab-o"></i>
         </button>
-        <button id="paper-btn" class="play-btn player-btn">
+        <button id="player-paper-btn" class="play-btn player-btn">
           <i class="fa fa-hand-paper-o"></i>
         </button>
-        <button id="scissors-btn" class="play-btn player-btn">
+        <button id="player-scissors-btn" class="play-btn player-btn">
           <i class="fa fa-hand-scissors-o"></i>
         </button>
       </div>
@@ -52,16 +52,19 @@
       </div>
 
       <div class="player-button-group computer-button-area">
-        <div class="play-btn computer-btn">
+        <div id="computer-rock-btn" class="play-btn computer-btn">
           <i class="fa fa-hand-grab-o"></i>
         </div>
-        <div class="play-btn computer-btn">
+        <div id="computer-paper-btn" class="play-btn computer-btn">
           <i class="fa fa-hand-paper-o"></i>
         </div>
-        <div class="play-btn computer-btn">
+        <div id="computer-scissors-btn" class="play-btn computer-btn">
           <i class="fa fa-hand-scissors-o"></i>
         </div>
       </div>
+
+      <div class="result winner hidden" id="winner"><p>Winner!</p></div>
+      <div class="result tie hidden" id="tie">Tie!</div>
     </section>
 
     <section class="new-game container">

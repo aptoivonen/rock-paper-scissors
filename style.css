@@ -23,6 +23,7 @@ body {
 
 p {
   margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -49,6 +50,8 @@ p {
     "computer-button-area computer-button-area"
     "computer-name-area computer-wins-area";
   grid-template-columns: 1fr 2fr;
+  position: relative;
+  overflow: hidden;
 }
 
 .round-container {
@@ -116,6 +119,7 @@ p {
   padding: 0;
   width: var(--btn-size);
   height: var(--btn-size);
+  transition: all 1s;
 }
 
 .play-btn i {
@@ -133,6 +137,24 @@ p {
   color: #aaa;
 }
 
+.winner-btn {
+  background-color: green;
+  border: 3px solid green;
+  box-shadow: 0 0 30px green;
+}
+
+.loser-btn {
+  background-color: red;
+  border: 3px solid red;
+  box-shadow: 0 0 30px red;
+}
+
+.tie-btn {
+  background-color: #666;
+  border: 3px solid #666;
+  box-shadow: 0 0 30px #666;
+}
+
 .new-game-btn {
   background-color: var(--palette-color-violette-light);
   border-radius: 10px;
@@ -141,6 +163,37 @@ p {
   font: inherit;
   font-size: 2rem;
   padding: 0.5rem 0.9rem;
+}
+
+.result {
+  font-size: 10rem;
+  line-height: 9rem;
+  left: 10%;
+  position: absolute;
+  transform: rotateZ(20deg);
+}
+
+.result-player {
+  top: 13%;
+}
+
+.result-computer {
+  top: 63%;
+}
+
+.winner {
+  color: green;
+  text-shadow: 0 0 40px green;
+}
+
+.tie {
+  color: #ccc;
+  text-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  top: 40%;
+}
+
+.hidden {
+  display: none;
 }
 
 @media only screen and (min-width: 520px) and (max-width: 550px) {
@@ -157,7 +210,15 @@ p {
 
 @media only screen and (min-width: 701px) {
   .play-area {
-    --player-info-font-size: 6rem;
-    grid-template-columns: 1.5fr 2fr;
+    --player-info-font-size: 3rem;
+    grid-template-columns: 3fr 0.5fr 5fr;
+    grid-template-areas:
+      "round-area round-area round-area"
+      "player-name-area player-wins-area player-button-area"
+      "computer-name-area computer-wins-area computer-button-area";
+  }
+
+  .play-btn {
+    --btn-size: calc(15vw);
   }
 }
