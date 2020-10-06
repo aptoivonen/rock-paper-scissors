@@ -13,50 +13,58 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="content header">
-      <h1>Rock Paper Scissors</h1>
+    <header class="container header">
+      <h1 class="main-heading">Rock Paper Scissors</h1>
     </header>
-    <section class="content play">
+
+    <section class="container play-area">
       <div class="round-container">
-        <p class="round-label">Round</p>
-        <p class="round" id="round">1</p>
+        <span class="round-label">Round</span>
+        <span class="round" id="round">1</span>
       </div>
-      <div class="player-container">
-        <p class="player-name">Player</p>
-        <p class="player-wins-label label">Wins</p>
-        <p class="player-wins" id="player-wins">0</p>
-        <div class="player-button-group">
-          <button id="rock-btn" class="play-btn player-btn">
-            <i class="fa fa-hand-grab-o"></i>
-          </button>
-          <button id="paper-btn" class="play-btn player-btn">
-            <i class="fa fa-hand-paper-o"></i>
-          </button>
-          <button id="scissors-btn" class="play-btn player-btn">
-            <i class="fa fa-hand-scissors-o"></i>
-          </button>
+
+      <div class="player-name-area">
+        <span class="player-name">Player</span>
+      </div>
+
+      <div class="player-wins-area">
+        <span class="player-wins" id="player-wins">0</span>
+      </div>
+
+      <div class="player-button-group player-button-area">
+        <button id="rock-btn" class="play-btn player-btn">
+          <i class="fa fa-hand-grab-o"></i>
+        </button>
+        <button id="paper-btn" class="play-btn player-btn">
+          <i class="fa fa-hand-paper-o"></i>
+        </button>
+        <button id="scissors-btn" class="play-btn player-btn">
+          <i class="fa fa-hand-scissors-o"></i>
+        </button>
+      </div>
+
+      <div class="computer-name-area">
+        <span class="player-name">Computer</span>
+      </div>
+
+      <div class="computer-wins-area">
+        <span class="player-wins" id="computer-wins">0</span>
+      </div>
+
+      <div class="player-button-group computer-button-area">
+        <div class="play-btn computer-btn">
+          <i class="fa fa-hand-grab-o"></i>
+        </div>
+        <div class="play-btn computer-btn">
+          <i class="fa fa-hand-paper-o"></i>
+        </div>
+        <div class="play-btn computer-btn">
+          <i class="fa fa-hand-scissors-o"></i>
         </div>
       </div>
-      <div class="ties-container">
-        <p class="ties-label label">Ties</p>
-        <p id="ties">0</p>
-      </div>
-      <div class="player-container">
-        <p class="player-name">Computer</p>
-        <p class="player-wins-label label">Wins</p>
-        <p class="player-wins" id="computer-wins">0</p>
-        <div class="player-button-group">
-          <div class="play-btn computer-btn">
-            <i class="fa fa-hand-grab-o"></i>
-          </div>
-          <div class="play-btn computer-btn">
-            <i class="fa fa-hand-paper-o"></i>
-          </div>
-          <div class="play-btn computer-btn">
-            <i class="fa fa-hand-scissors-o"></i>
-          </div>
-        </div>
-      </div>
+    </section>
+
+    <section class="new-game container">
       <div class="new-game-container">
         <button class="new-game-btn" id="new-game-btn">New Game</button>
       </div>
