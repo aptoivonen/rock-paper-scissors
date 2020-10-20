@@ -22,7 +22,7 @@ class GameData {
 
   updateResult(roundResult) {
     let { gameResult, MAX_ROUNDS, RESULTS } = this;
-    if (this.round >= MAX_ROUNDS) return;
+    if (this.round > MAX_ROUNDS) return;
     if (roundResult === RESULTS.TIE) gameResult.ties++;
     else if (roundResult === RESULTS.PLAYER_WIN) gameResult.playerWins++;
     else if (roundResult === RESULTS.COMPUTER_WIN) gameResult.computerWins++;
@@ -30,7 +30,7 @@ class GameData {
   }
 
   isGameOver() {
-    return this.round >= this.MAX_ROUNDS;
+    return this.round > this.MAX_ROUNDS;
   }
 
   getFinalResult() {
@@ -99,7 +99,8 @@ const addResultClasses = function (
 };
 
 const updateRoundLabel = function () {
-  $("round").textContent = gameData.round;
+  if (gameData.round <= gameData.MAX_ROUNDS)
+    $("round").textContent = gameData.round;
 };
 
 const updateWinLabels = function () {
